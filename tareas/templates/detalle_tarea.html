@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>Detalle de la tarea</h1>
+    <h2>{{tareadeta.titulo}}</h1>
+    <h3>{{tareadeta.descripcion}}</h3>
+    <form action="" method='POST'>
+        {% csrf_token %}
+        {{formul}}
+        <button>
+            Actualizar y guardar
+        </button>
+    </form>
+
+    <form action="{% url 'completado' tareadeta.id %}" method='POST'>
+        {% csrf_token %}
+        {{elim}}
+        <button>
+            Completar
+        </button>
+    </form>
+
+    <form action="{% url 'eliminar' tareadeta.id %}" method='POST'>
+        {% csrf_token %}
+        {{elim}}
+        <button>
+            eliminar
+        </button>
+    </form>
+
+{% endblock content%}

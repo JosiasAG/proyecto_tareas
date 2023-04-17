@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Tareas</h1>
+<ul>
+{% for tarea in tareas %}
+<li>
+<a href="{% url 'detalles_tarea' tarea.id %}">
+    <h1>{{tarea.titulo}}</h1>
+    <h2>{{tarea.descripcion}}</h2>
+    <h3>{{tarea.user.username}}</h3>
+</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
