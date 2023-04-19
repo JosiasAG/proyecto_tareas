@@ -79,13 +79,13 @@ WSGI_APPLICATION = 'proyectoPan.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mysite',  
-        conn_max_age=600    
-        )
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'postgres',
+    'USER' : 'postgres',
+    'PASSWORD' : 'Redmatador2312',
+    'PORT' : '5432',
     }
 }
 

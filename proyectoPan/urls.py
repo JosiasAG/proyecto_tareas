@@ -20,7 +20,7 @@ from tareas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/', views.inicio, name="inicio"),
+    path('index/', views.inicio, name="inicio"),
     path("signup/", views.signup, name="signup"),
     path("tareas/", views.lasTareas, name="tareas"),
     path("logout/", views.salida, name="salida"),
